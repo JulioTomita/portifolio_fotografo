@@ -1,7 +1,10 @@
 "use client";
-import Bio from "@/components/bio";
-import Budget from "@/components/budget";
-import Sectors from "@/components/sectors";
+import Bio from "@/components/Bio/bio";
+import Budget from "@/components/Budget/budget";
+import CarroselHomepage from "@/components/Carrosel/carroselHomepage";
+import Contact from "@/components/Contact/contact";
+import FeedbackBox from "@/components/FeedBackBox/feedbackBox";
+import Sectors from "@/components/Sectors/sectors";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +14,9 @@ export default function Home() {
         <Budget />
         <Bio />
         <Sectors />
+        <CarroselHomepage />
+        <FeedbackBox />
+        <Contact />
       </div>
     </main>
   );

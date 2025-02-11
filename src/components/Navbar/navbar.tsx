@@ -18,7 +18,7 @@ export const Navbar = (props: NavbarProps) => {
 
 export const LogoMark = () => {
   return (
-    <div className="flex items-center justify-center w-20 h-12 bg-zinc-900 text-white text-sm">
+    <div className="flex items-center justify-center w-20 h-12 bg-zinc-900 text-white text-sm font-extralight">
       <h1>
         Julio Tomita <br /> Fotografias
       </h1>

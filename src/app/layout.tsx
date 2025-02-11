@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Julio Fotografias",
   description: "Um site de fotografia",
+  icons: [
+    {
+      href: "/favicon.ico",
+      url: "/favicon.ico",
+    },
+  ],
 };
 
 export default function RootLayout({
