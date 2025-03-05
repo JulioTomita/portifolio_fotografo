@@ -13,7 +13,7 @@ export default function CarroselHomepage() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full bg-gray-200 gap-6 py-8">
       <span className="font-semibold font-serif text-xl items-center">
-        Veja Nosso Carroseu de Fotos:
+        Veja Nosso Carrossel de Fotos:
       </span>
       <Carousel opts={{ align: "center" }} className="w-full overflow-hidden">
         <CarouselContent>
