@@ -1,3 +1,14 @@
+"use client";
+
+import {
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+import { RxDropdownMenu } from "react-icons/rx";
+
 interface NavbarProps {
   logado?: boolean;
 }
@@ -28,8 +39,16 @@ export const LogoMark = () => {
 
 export const LoginButton = () => {
   return (
-    <button className="bg-zinc-900 text-white rounded-2xl p-2 border border-white">
-      Login
-    </button>
+    <RxDropdownMenu>
+      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem>
+      </DropdownMenuContent>
+    </RxDropdownMenu>
   );
 };
