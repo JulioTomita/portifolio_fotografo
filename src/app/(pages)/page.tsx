@@ -9,8 +9,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full h-full justify-between bg-white">
-      <div className="w-full h-full">
+    <main className=" bg-white">
+      <div className="w-full h-full flex flex-col items-center justify-between">
         <Budget />
         <Bio />
         <Sectors />

@@ -15,7 +15,7 @@ export default function CustomInput({
     <div className="flex flex-col w-full h-full">
       <div className="text-black items-start flex">{label}</div>
       <input
-        className="w-1/4 h-10 px-2 items-center justify-center text-black bg-gray-200 border border-black rounded-md flex"
+        className="w-1/2 h-10 px-2 items-center justify-center text-black bg-gray-200 border border-black rounded-md flex"
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
