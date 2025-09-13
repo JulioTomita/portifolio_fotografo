@@ -45,11 +45,11 @@ export default function Contact() {
           placeholder="Digite sua mensagem"
         />
         <Button
-        className="text-xl text-white w-1/2"
-        color="bg-blue-300"
-        text="Enviar"
-        borderColor="border"
-        onClick={() => {}}
+          className="text-xl text-white w-1/2"
+          color="bg-blue-300"
+          text="Enviar"
+          borderColor="border"
+          onClick={() => {}}
         />
       </div>
     </div>

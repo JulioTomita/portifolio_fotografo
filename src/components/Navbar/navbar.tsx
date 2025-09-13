@@ -1,13 +1,13 @@
 "use client";
 
 import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import { RxDropdownMenu } from "react-icons/rx";
+import React from "react";
+import { Button } from "../ui/button";
 
 interface NavbarProps {
   logado?: boolean;
@@ -20,9 +20,9 @@ export const Navbar = (props: NavbarProps) => {
       <LogoMark />
       <a href="/">HOME</a>
       <a href="/galeria">GALERIA</a>
-      <a href="/contato">CONTATO</a>
+      <a href="/sobre">SOBRE</a>
       <a href="/orcamento">ORÇAMENTO</a>
-      <LoginButton />
+      <DropdownButton />
     </nav>
   );
 };
@@ -37,18 +37,47 @@ export const LogoMark = () => {
   );
 };
 
-export const LoginButton = () => {
+export function DropdownButton() {
   return (
-    <RxDropdownMenu>
-      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="outline"
+          className="bg-blue-300 rounded-xl w-36 h-10 hover:text-black"
+        >
+          Login
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-full bg-blue-200 p-4 rounded-xl bg-opacity-75 cursor-pointer">
+        <DropdownMenuCheckboxItem
+          onClick={() => {
+            window.location.href = "/galeria";
+          }}
+        >
+          PERFIL
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          onClick={() => {
+            window.location.href = "/orcamento";
+          }}
+        >
+          ORÇAMENTOS
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          onClick={() => {
+            window.location.href = "/galeria";
+          }}
+        >
+          CONTRATOS
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          onClick={() => {
+            window.location.href = "/galeria";
+          }}
+        >
+          CALENDARIO
+        </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
-    </RxDropdownMenu>
+    </DropdownMenu>
   );
-};
+}
