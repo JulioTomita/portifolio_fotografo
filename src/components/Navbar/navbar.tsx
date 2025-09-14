@@ -50,7 +50,7 @@ export function DropdownButton() {
       <DropdownMenuContent className="w-full bg-blue-200 p-4 rounded-xl bg-opacity-75 cursor-pointer">
         <DropdownMenuCheckboxItem
           onClick={() => {
-            window.location.href = "/galeria";
+            window.location.href = "/perfil";
           }}
         >
           PERFIL
