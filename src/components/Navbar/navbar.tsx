@@ -21,7 +21,6 @@ export const Navbar = (props: NavbarProps) => {
       <a href="/">HOME</a>
       <a href="/galeria">GALERIA</a>
       <a href="/sobre">SOBRE</a>
-      <a href="/orcamento">ORÇAMENTO</a>
       <DropdownButton />
     </nav>
   );

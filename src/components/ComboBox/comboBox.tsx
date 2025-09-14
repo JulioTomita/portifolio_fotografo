@@ -19,6 +19,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
+interface ComboBoxProps {
+  filter?: string;
+}
+
 const frameworks = [
   {
     value: "Formatura",
@@ -29,19 +33,22 @@ const frameworks = [
     label: "Casamento",
   },
   {
-    value: "Aniversário",
+    value: "Aniversario",
     label: "Aniversário",
   },
   {
     value: "Corporativo",
     label: "Corporativo",
   },
+  {
+    value: "Festa",
+    label: "Festa",
+  },
 ];
 
-export function ComboboxDemo() {
+export function ComboboxDemo({ filter }: ComboBoxProps) {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
-
+  const [value, setValue] = React.useState(filter ? filter : "");
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
