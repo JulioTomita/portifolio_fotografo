@@ -36,7 +36,7 @@ export const SectorsTemplate = ({ img, title }: SectorsProps) => {
   };
 
   return (
-    <div className="bg-white rounded-lg">
+    <div className="bg-white rounded-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
       <div className="">
         <div
           className="relative h-80 w-full overflow-hidden cursor-pointer"
